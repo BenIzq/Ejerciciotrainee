@@ -17,7 +17,7 @@ namespace Ejercicio3
             WriteLine("Es fin de semana");
         }
         else {
-            WriteLine("El dia no es valido");
+            WriteLine("El dia ingresado no existe");
         }
         }
     }
