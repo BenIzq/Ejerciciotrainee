@@ -26,11 +26,11 @@ namespace EjercicioS1
                 Console.WriteLine("El numero es menor o igual a 100");
             }
 
-            for (int i = 2; i < numero; i++)
+            for (int i = 2; i < n; i++)
             {
-                if ((numero%i)==0)
+                if ((n%i)==0)
                 {
-                    esPrimo=false;
+                    primo=false;
                 }
             }
             if (primo == true) 
