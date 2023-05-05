@@ -1,4 +1,4 @@
-namespace Ejercicio_Semana1
+namespace EjercicioS1
 {
     internal class Program
     {
