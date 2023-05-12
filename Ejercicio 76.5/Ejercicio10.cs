@@ -1,30 +1,39 @@
 using System;
-
+using System.Collections;
+using System.Collections.Generic;
 public class Ejercicio10
 {
-        static void Main(string[] args)
+  static void Main(string[] args)
+  {
+    int ingresados = 0;
+    Console.WriteLine("Cuantos numeros va a ingresar: ");
+    int cantidad = Convert.ToInt32(Console.ReadLine());
+    ArrayList arreglo = new ArrayList();
+
+    while (cantidad > ingresados)
     {
-        int n, sump = 0, sumi = 0;
-
-        for (int i = 1; i <= 10; i++)
-        {
-            Console.Write($"Ingrese el número {i}: ");
-            n = int.Parse(Console.ReadLine());
-
-            if (n % 2 == 0)
-            {
-                sump += n;
-            }
-            else
-            {
-                sumi += n;
-            }
-        }
-
-        int total = sump - sumi;
-
-        Console.WriteLine("La suma de los pares es: " + sump);
-        Console.WriteLine("La suma de los impares es " + sumi);
-        Console.WriteLine("El resultado es: " + total);
+      Console.WriteLine("Ingrese un numero: ");
+      arreglo.Add(Console.ReadLine());
+      ingresados++;
     }
+
+    for (int i = 0; i < cantidad; i++)
+    {
+      Console.WriteLine(arreglo[i]);
     }
+
+    Console.WriteLine("Ingrese un numero para agregar: ");
+    int numero = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("Ingrese la posicion donde lo quiere: ");
+    int posicion = Convert.ToInt32(Console.ReadLine());
+
+    arreglo[posicion] = numero;
+    foreach (var item in arreglo)
+    {
+      Console.WriteLine(item);
+    }
+    Console.ReadLine();
+  }
+}
+
