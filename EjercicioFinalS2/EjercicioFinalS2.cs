@@ -3,12 +3,12 @@ using System.Text;
 
 class Program
 {
-    static string ReverseString(string str)
+    static string derecha(string oracion)
     {
-        StringBuilder sb = new StringBuilder(str.Length);
-        for (int i = str.Length - 1; i >= 0; i--)
+        StringBuilder sb = new StringBuilder(oracion.Length);
+        for (int i = oracion.Length - 1; i >= 0; i--)
         {
-            sb.Append(str[i]);
+            sb.Append(oracion[i]);
         }
         return sb.ToString();
     }
@@ -40,7 +40,7 @@ class Program
         }
 
         string normal = sb.ToString();
-        string alrevez = ReverseString(normal);
+        string alrevez = derecha(normal);
         return normal == alrevez;
     }
 }
