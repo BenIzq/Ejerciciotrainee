@@ -20,7 +20,18 @@ class Program
     foreach (Alumno alumno in listaAlumnos)
     {
       double promedio = alumno.Notas.Average();
+        Console.WriteLine("Nombre: " + alumno.Nombre + " " + alumno.Apellido);
+        Console.WriteLine("Numero de Identificacion: " + alumno.Identificacion);
+        Console.WriteLine("Carrera: " + alumno.Carrera);
+        Console.WriteLine("Promedio: " + promedio);
+        Console.WriteLine();
+      
+    }
 
+    foreach (Alumno alumno in listaAlumnos)
+    {
+      double promedio = alumno.Notas.Average();
+      double promediogeneral = promedio + promediogeneral;
       if (promedio >= 6)
       {
         Console.WriteLine("Nombre: " + alumno.Nombre + " " + alumno.Apellido);
@@ -28,6 +39,9 @@ class Program
         Console.WriteLine();
       }
     }
+    promediogeneral = promediogeneral / 5;
+    Console.WriteLine("Promedio General: " +  promediogeneral);
+
     Console.ReadLine();
   }
 }
