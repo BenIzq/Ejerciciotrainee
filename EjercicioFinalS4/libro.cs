@@ -9,13 +9,12 @@ public class Libro : Material
   {
     Autor = autor;
   }
-
-  public void Prestar()
+  public void prestar()
   {
     if (Disponible)
     {
-      Disponible = false;
       Console.WriteLine("El libro ha sido prestado");
+      Disponible = false;
     }
     else
     {
@@ -23,7 +22,7 @@ public class Libro : Material
     }
   }
 
-  public void Devolver()
+  public void devolver()
   {
     Disponible = true;
     Console.WriteLine("El libro fue devuelto");

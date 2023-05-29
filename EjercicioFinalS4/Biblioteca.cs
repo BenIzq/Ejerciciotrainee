@@ -5,25 +5,15 @@ public class Biblioteca : IBiblioteca
   {
     materiales = new List<Material>();
   }
-
-  public void AgregarMaterial(Material material)
+  public void agregar(Material material)
   {
     materiales.Add(material);
   }
-
-  public void PrestarMaterial(Material material)
+  public void prestar(Material material)
   {
-    if (material.Disponible)
-    {
       material.Prestar();
-    }
-    else
-    {
-      Console.WriteLine("No esta disponible.");
-    }
   }
-
-  public void DevolverMaterial(Material material)
+  public void devolver(Material material)
   {
     material.Devolver();
   }

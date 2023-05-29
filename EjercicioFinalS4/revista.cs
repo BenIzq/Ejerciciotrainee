@@ -4,23 +4,28 @@ using System.Collections.Generic;
 
 public class Revista : Material
 {
-  public int Edicion { get; set; }
+  public string Edicion { get; set; }
 
-  public Revista(string titulo, int edicion) : base(titulo)
+  public Revista(string titulo, string edicion) : base(titulo)
   {
     Edicion = edicion;
   }
 
-  public void Prestar()
+  public void prestar()
   {
     if (Disponible)
     {
+      Console.WriteLine("la revista ha sido prestada");
       Disponible = false;
-      Console.WriteLine("La revista ha sido prestada");
     }
     else
     {
-      Console.WriteLine("La revista ya se presto");
+      Console.WriteLine("la revista ya se presto");
     }
+  }
+  public void devolver()
+  {
+    Console.WriteLine("la revista fue devuelta");
+    Disponible = true;
   }
 }
