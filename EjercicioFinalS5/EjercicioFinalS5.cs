@@ -10,7 +10,8 @@ namespace EjercicioFinalS5
 
         Console.Write("Ingrese su nombre de jugador: ");
         string nombreJugador = Console.ReadLine();
-        Jugador jugador = new Jugador(nombreJugador);
+        string nombrelowe = nombreJugador.ToLower();
+        Jugador jugador = new Jugador(nombrelowe);
 
         List<Jugador> jugadoresGuardados = Jugador.CargarDatos("datos.bin");
         jugadoresGuardados.Add(jugador);
@@ -18,7 +19,8 @@ namespace EjercicioFinalS5
 
         Console.WriteLine("Ingrese el nombre de usuario del jugador a buscar: ");
         string nombreBuscado = Console.ReadLine();
-        Jugador jugadorBuscado = jugadoresGuardados.Find(j => j.usuario == nombreBuscado);
+        string minuscula = nombreBuscado.ToLower();
+        Jugador jugadorBuscado = jugadoresGuardados.Find(j => j.usuario == minuscula);
         if (jugadorBuscado != null)
         {
             Console.WriteLine("Jugador encontrado:");
