@@ -12,7 +12,6 @@ public class Jugador
 
   public Jugador()
   {
-    // Constructor sin parámetros
   }
 
   public Jugador(string nombre)
@@ -57,5 +56,11 @@ public class Jugador
     }
     return jugadores;
   }
+  private static void RegistrarError(Exception ex, String mensaje)
+        {
+            Console.WriteLine(mensaje + ex.Message);
+            string mensajeError = $"\n{DateTime.Now}: {ex.Message}";
+            File.AppendAllText("Errors.log", mensajeError);
+        }
 
 }
